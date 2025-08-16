@@ -1,0 +1,210 @@
+/* Contact Section Glassmorphism */
+.contact {
+  padding: 5rem 9% 5rem;
+  background: linear-gradient(135deg, rgba(5, 159, 241, 0.1), rgba(0, 0, 0, 0.9));
+  position: relative;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(5, 159, 241, 0.2), transparent 60%);
+  pointer-events: none;
+}
+
+.contact .sub-title {
+  color: #fff;
+  text-shadow: 0 0 20px rgba(5, 159, 241, 0.3);
+  margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  gap: 2rem;
+}
+
+.contact-left {
+  flex-basis: 35%;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(5, 159, 241, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-right {
+  flex-basis: 60%;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(5, 159, 241, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-left:hover,
+.contact-right:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(5, 159, 241, 0.15);
+  border-color: rgba(5, 159, 241, 0.3);
+}
+
+.contact-left p {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.contact-left p i {
+  color: var(--main-color);
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(5, 159, 241, 0.3);
+}
+
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons a:hover {
+  background: var(--main-color);
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(5, 159, 241, 0.4);
+}
+
+.social-icons a i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.btn-cv {
+  margin-top: 2.5rem;
+  padding: 1rem 2.5rem;
+  background: rgba(5, 159, 241, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(5, 159, 241, 0.3);
+  border-radius: 30px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-cv:hover {
+  background: var(--main-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(5, 159, 241, 0.2);
+}
+
+.btn-cv a {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* Form Styling */
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-right form input,
+.contact-right form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.6rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-right form input:focus,
+.contact-right form textarea:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 20px rgba(5, 159, 241, 0.2);
+  transform: translateY(-2px);
+}
+
+.contact-right form input::placeholder,
+.contact-right form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-right form button {
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background: rgba(5, 159, 241, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(5, 159, 241, 0.3);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  align-self: flex-start;
+}
+
+.contact-right form button:hover {
+  background: var(--main-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(5, 159, 241, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  
+  .row {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact-left,
+  .contact-right {
+    padding: 2rem;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .btn-cv {
+    display: block;
+    text-align: center;
+    margin: 2.5rem auto 0;
+  }
+}

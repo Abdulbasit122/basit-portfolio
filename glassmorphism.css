@@ -1,0 +1,140 @@
+/* Glassmorphism Effects */
+
+/* Services Section */
+.services {
+    background: linear-gradient(135deg, rgba(5, 159, 241, 0.05), rgba(0, 0, 0, 0.9));
+    position: relative;
+    overflow: hidden;
+}
+
+.services-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+    background: rgba(5, 159, 241, 0.1);
+    border-color: rgba(5, 159, 241, 0.3);
+    box-shadow: 0 15px 30px rgba(5, 159, 241, 0.2);
+}
+
+.services-box i {
+    color: var(--main-color);
+    text-shadow: 0 0 20px rgba(5, 159, 241, 0.3);
+}
+
+/* Skills Section */
+.skills {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(5, 159, 241, 0.05));
+    position: relative;
+}
+
+.skills-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skills-box:hover {
+    transform: translateY(-5px);
+    background: rgba(5, 159, 241, 0.1);
+    border-color: rgba(5, 159, 241, 0.3);
+    box-shadow: 0 10px 25px rgba(5, 159, 241, 0.2);
+}
+
+/* Certificates Section */
+.certificates {
+    background: linear-gradient(135deg, rgba(5, 159, 241, 0.05), rgba(0, 0, 0, 0.9));
+    position: relative;
+}
+
+.image-wrapper-cert {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-wrapper-cert:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(5, 159, 241, 0.3);
+    box-shadow: 0 15px 30px rgba(5, 159, 241, 0.2);
+}
+
+/* Enhanced Buttons */
+.btn-hire,
+.btn-cv,
+.button {
+    background: rgba(5, 159, 241, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(5, 159, 241, 0.3);
+    border-radius: 30px;
+    padding: 1rem 2.5rem;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hire::before,
+.btn-cv::before,
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(5, 159, 241, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.btn-hire:hover::before,
+.btn-cv:hover::before,
+.button:hover::before {
+    left: 100%;
+}
+
+.btn-hire:hover,
+.btn-cv:hover,
+.button:hover {
+    background: var(--main-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(5, 159, 241, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .services-box,
+    .skills-box,
+    .image-wrapper-cert {
+        transform: none;
+    }
+    
+    .services-box:hover,
+    .skills-box:hover,
+    .image-wrapper-cert:hover {
+        transform: translateY(-5px);
+    }
+}
